@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragments.Homefragment"
+    android:background="@color/white">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:id="@+id/profileHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profileImage"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/profile" />
+
+            <TextView
+                android:id="@+id/greetings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="15dp"
+                android:layout_marginLeft="21dp"
+                android:layout_toRightOf="@id/profileImage"
+                android:text="Hello Jasson"
+                android:textColor="@color/black"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+
+            <ImageButton
+                android:id="@+id/imageButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/button_border_background"
+                android:padding="8dp"
+                android:src="@drawable/baseline_search_24" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/userAmountContainer"
+            android:layout_below="@id/profileHeader"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp">
+
+            <ImageView
+                android:id="@+id/change"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/increase_arrow"
+                android:layout_toRightOf="@id/userAmount"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="15dp"/>
+
+            <TextView
+                android:id="@+id/userAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$76,050.00"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="40dp"/>
+
+            <TextView
+                android:id="@+id/changeAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$3,409.00"
+                android:layout_toRightOf="@id/change"
+                android:textColor="@color/green"
+                android:layout_marginTop="20dp"/>
+            <TextView
+                android:id="@+id/activeBalance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Active Balance"
+                android:layout_below="@id/userAmount"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/light_gray"/>
+        </RelativeLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/learnSection"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@drawable/background_light_blue"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_below="@id/userAmountContainer">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="30dp"
+                android:text="Currency Convertor"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="23dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:textSize="13dp"
+                android:text="Let's get started"
+                android:textStyle="bold"
+                android:textColor="@color/light_gray"
+                app:layout_constraintStart_toStartOf="@+id/textView"
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/cryptobg1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:paddingStart="30dp"
+                android:paddingEnd="30dp"
+                android:text="Convertor"
+                android:textAllCaps="false"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:background="@drawable/button_yellow_background"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/textView2"
+                app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <TextView
+            android:id="@+id/marketPlaces"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Market Places"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:textColor="@color/black"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            android:layout_below="@id/learnSection"/>
+
+<!--        <TextView-->
+<!--            android:id="@+id/viewMoremarketPlaces"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="View all"-->
+<!--            android:textSize="15dp"-->
+<!--            android:textStyle="bold"-->
+<!--            android:textColor="@color/light_gray"-->
+<!--            android:layout_below="@id/learnSection"-->
+<!--            android:layout_marginTop="15dp"-->
+<!--            android:layout_alignParentRight="true"-->
+<!--            android:layout_marginRight="20dp"-->
+<!--            android:textAlignment="textEnd"-->
+<!--            android:clickable="true"/>-->
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/my_horizontal_list_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/marketPlaces"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal" />
+
+        <TextView
+            android:id="@+id/recentGains"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your Recent Gains"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:textColor="@color/black"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            android:layout_below="@id/my_horizontal_list_view"/>
+
+        <TextView
+            android:id="@+id/viewMorerecentGains"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="View all"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:textColor="@color/light_gray"
+            android:layout_below="@id/my_horizontal_list_view"
+            android:layout_marginTop="15dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:textAlignment="textEnd"
+            android:clickable="true"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recentListView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/recentGains"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            tools:listitem="@layout/recent_gain_item" />
+
+
+
+    </RelativeLayout>
+    </ScrollView>
+
+</FrameLayout>
